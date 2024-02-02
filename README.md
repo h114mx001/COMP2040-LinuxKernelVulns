@@ -18,10 +18,15 @@ Bug chain of OS Command Injection to Dirty CoW ([CVE-2016-5195](https://nvd.nist
 3. Clone this repository
 
 ```bash
-git clone ...
+git clone https://github.com/h114mx001/COMP2040-LinuxKernelVulns
 ```
 4. Run the web service
 ```bash
 cd COMP2040-LinuxKernelVuln
 python3 ./main.py
 ```
+5. Assert the service is accessible from outside of the VM.
+
+## Attack
+
+Under development
