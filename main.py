@@ -1,8 +1,6 @@
 from flask import Flask, render_template
 from flask import request, send_file
-from PIL import Image, ImageDraw, ImageFont
-import random
-import subprocess
+import os 
 
 app = Flask(__name__)
 
@@ -14,8 +12,8 @@ def home():
 def generate_meme():
     # Get the text from the form submission
     text = request.form.get('inputText')
-
-    subprocess.check_output(f"python3 ./image_writer.py -t {text}", shell=True)
+    os.system(f"python3 ./image_writer.py -t {text}")    
+    # subprocess.check_output(f"python3 ./image_writer.py -t {text}", shell=True)
     # Return the new image
     return send_file('meme_with_text.jpg', mimetype='image/jpeg')
 
