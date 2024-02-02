@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+</head>
+<body>
+    <h1>Flask App</h1>
+
+    <!-- Form for data submission -->
+    <form action="/meme" method="post">
+        <label for="inputText">Enter text:</label>
+        <input type="text" id="inputText" name="inputText">
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Placeholder for displaying image -->
+    <div id="image-display">
+        {% if image_url %}
+            <img src="{{ image_url }}" alt="Image from API">
+        {% else %}
+            <p>No image to display.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
